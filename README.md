@@ -1,8 +1,5 @@
-# PythonHW2
-third homework assignment of CIS Python Programming class
-
 #
-Assignment 2: Learning Machine Learning
+2: Learning Machine Learning
 In this assignment, we will be exploring data science, and building our first machine learning model from scratch! Make sure to install dependencies with pip install numpy pandas as we'll be using them for the assignment. Try to explore other dependency managers such as Pipenv and Poetry as well! In addition, make sure to keep your data files in the same directory as your assignment2.py (available here) to keep things simple.
 
 Part 1: Data Wrangling with Pandas
