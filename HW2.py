@@ -4,7 +4,10 @@ from collections import defaultdict
 
 
 def scavenger_hunt() -> dict:
-    pass
+    #read the file into a dataframe
+    df = pd.read_csv('wine.csv')
+    #display the df
+    print(df.shape)
 
 
 def get_words(file_path) -> list:
@@ -32,12 +35,15 @@ def stringify(sentence) -> list:
 
 
 if __name__ == '__main__':
-    # create model
-    words = get_words('corpus.txt')
-    n_grams = get_ngrams(words, 1)
-    counts = get_counts(n_grams)
+    # # create model
+    # words = get_words('corpus.txt')
+    # n_grams = get_ngrams(words, 1)
+    # counts = get_counts(n_grams)
 
-    # generate text
-    context = n_grams[np.random.choice(len(n_grams))]
-    sentence = generate_sentence(counts, context, length=50)
-    print(stringify(sentence))
+    # # generate text
+    # context = n_grams[np.random.choice(len(n_grams))]
+    # sentence = generate_sentence(counts, context, length=50)
+    # print(stringify(sentence))
+
+
+    scavenger_hunt()
