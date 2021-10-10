@@ -64,4 +64,4 @@ if __name__ == '__main__':
     # print(stringify(sentence))
 
 
-    scavenger_hunt()
+    # scavenger_hunt()

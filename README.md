@@ -40,20 +40,12 @@ In this assignment, we will be building a language model, which is how we can ma
 
 In short, an n-gram language model works by treating language as a sequence of overlapping word tuples, of size
 n
-n. For example, the sentence "I love CIS 192" would be represented as unigrams (
-n
-=
-1
-n=1) as:
+n. For example, the sentence "I love CIS 192" would be represented as unigrams (n=1) as:
 
 [("I"), ("love"), ("CIS"), ("192")]
-and as bigrams (
-n
-=
-2
-n=2) as:
-
+and as bigrams (n=2) as:
 [("I", "love"), ("love", "CIS"), ("CIS", "192")]
+
 Language models work by estimating the probability of the next word in sequence given the previous words, and sampling from that distribution. If you're familiar with the Markov Property, we will be relying on it as a powerful assumption to make the generation process simpler. Powerful language models (such as GPT-3 and the human brain) should include all the history in a sentence. However, for this assignment, we will just be considering a single n-gram of history to make the math simpler.
 
 At a high level, in this assignment, we will build an estimator for the probability of a given word (or n-gram), given a context (n-gram), and then a way to repeatedly select new words until we have a full body of text.
