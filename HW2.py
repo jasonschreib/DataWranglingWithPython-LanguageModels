@@ -29,9 +29,29 @@ def scavenger_hunt() -> dict:
     return answers
 
 #load the data from a given text file into memory
+#O: list of lowercase words (as strings) in order appear in txt file
+#I: string of the file path - relative bc same directory
+#C: input not a string?
+#E:
 def get_words(file_path) -> list:
-    pass
-
+    #if the input is not a string
+    if not type(file_path) is str:
+        #throw an error
+        raise Exception('Sorry, please input a string as the file path')
+    #otherwise
+    else:
+        #open the text file
+        with open(file_path, 'r') as text_file:
+            #read the text file
+            contents = text_file.read()
+            #split the text file in the list
+            contents = contents.split()
+            #iterate over the list
+            for word in contents:
+                #convert each word to lowercase
+                word.lower()
+        #return the lowercase list
+        return contents
 
 def get_ngrams(words, size) -> list:
     pass
@@ -54,8 +74,8 @@ def stringify(sentence) -> list:
 
 
 if __name__ == '__main__':
-    # # create model
-    # words = get_words('corpus.txt')
+    # create model
+    words = get_words('corpus.txt')
     # n_grams = get_ngrams(words, 1)
     # counts = get_counts(n_grams)
 
