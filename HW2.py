@@ -28,6 +28,7 @@ def scavenger_hunt() -> dict:
     #return dictionary
     return answers
 
+#load the data from a given text file into memory
 def get_words(file_path) -> list:
     pass
 
