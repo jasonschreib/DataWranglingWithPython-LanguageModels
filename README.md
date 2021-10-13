@@ -38,9 +38,7 @@ Section 0: What is a language model?
 
 In this assignment, we will be building a language model, which is how we can machine learning to generate text (e.g. chatbots, summarization, translation). In particular, we will be training an n-gram model, which is a relatively simple but extremely powerful model. Next week, we'll work with the state-of-the-art in NLP, which includes neural networks!
 
-In short, an n-gram language model works by treating language as a sequence of overlapping word tuples, of size
-n
-n. For example, the sentence "I love CIS 192" would be represented as unigrams (n=1) as:
+In short, an n-gram language model works by treating language as a sequence of overlapping word tuples, of size n. For example, the sentence "I love CIS 192" would be represented as unigrams (n=1) as:
 
 [("I"), ("love"), ("CIS"), ("192")]
 and as bigrams (n=2) as:
@@ -62,9 +60,7 @@ Hint: make use of the split() function and lower().
 
 Section 2: Transforming Data
 
-Getting data into a useable format is often most important part of the machine learning process. For an n-gram model, this means taking our list of words and creating our list of n-grams, provided the value for
-n
-n.
+Getting data into a useable format is often most important part of the machine learning process. For an n-gram model, this means taking our list of words and creating our list of n-grams, provided the value for n.
 
 TODO: Implement get_ngrams(), which takes a list of words and the size of the grams and returns a list of tuples, where each tuple is a gram.
 

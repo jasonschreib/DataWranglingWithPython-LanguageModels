@@ -53,8 +53,30 @@ def get_words(file_path) -> list:
         #return the lowercase list
         return contents
 
+
+#O: list of tuples, where each tuple is a gram
+#I: list of words and integer size of the grams
+#C: if there is only one input
+#E: list of words is empty -> return an empty list
 def get_ngrams(words, size) -> list:
-    pass
+    #if input list is empty
+    if (len(words) == 0):
+        #return an empty list
+        return []
+    #create a result list
+    ngram_resultlist = []
+    #iterate over the words list and step by a value of size
+    for i in range(0, len(words), step):
+        #create a tuple
+        ngram_tuple = ()
+        #iterate over the range of the size var
+        for j in range(0, size):
+            #add vals to the tuple from the correct index
+            ngram_tuple.append(words[i+j])
+            #push the tuple to the result list
+            ngram_resultlist.append(ngram_tuple)
+    #return the result list
+    return ngram_resultlist
 
 
 def get_counts(n_grams) -> dict:
@@ -76,7 +98,7 @@ def stringify(sentence) -> list:
 if __name__ == '__main__':
     # create model
     words = get_words('corpus.txt')
-    # n_grams = get_ngrams(words, 1)
+    n_grams = get_ngrams(words, 1)
     # counts = get_counts(n_grams)
 
     # # generate text
