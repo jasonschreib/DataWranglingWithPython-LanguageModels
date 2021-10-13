@@ -66,15 +66,17 @@ def get_ngrams(words, size) -> list:
     #create a result list
     ngram_resultlist = []
     #iterate over the words list and step by a value of size
-    for i in range(0, len(words), step):
-        #create a tuple
-        ngram_tuple = ()
+    for i in range(0, len(words), size):
+        #create a list for the current ngram
+        ngram_list = []
         #iterate over the range of the size var
         for j in range(0, size):
-            #add vals to the tuple from the correct index
-            ngram_tuple.append(words[i+j])
-            #push the tuple to the result list
-            ngram_resultlist.append(ngram_tuple)
+            #add vals to the list from the correct index
+            ngram_list.append(words[i+j])
+        #convert this ngram list to a tuple
+        ngram_tuple = tuple(ngram_list)
+        #push the tuple to the result list
+        ngram_resultlist.append(ngram_tuple)
     #return the result list
     return ngram_resultlist
 
